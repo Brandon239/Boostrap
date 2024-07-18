@@ -62,32 +62,39 @@
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
                             <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                <div class="form-floating">
-                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                    <label for="name">Name</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name..." required>
+                                    </div>
                                 </div>
-                                <div class="form-floating">
-                                    <input class="form-control" id="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
-                                    <label for="email">Email address</label>
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email..." required>
+                                    </div>
                                 </div>
-                                <div class="form-floating">
-                                    <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
-                                    <label for="phone">Phone Number</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label class="form-label">Sex</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="sex" id="sexMan" value="Man" checked>
+                                            <label class="form-check-label" for="sexMan">Man</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="sex" id="sexWoman" value="Woman">
+                                            <label class="form-check-label" for="sexWoman">Woman</label>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-floating">
-                                    <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
-                                    <label for="message">Message</label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="text" class="form-label">Text</label>
+                                        <textarea class="form-control" id="text" placeholder="Enter your message here..." style="height: 12rem" required></textarea>
+                                    </div>
                                 </div>
-                                <br />
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
+                                <!-- Submit success message -->
                                 <div class="d-none" id="submitSuccessMessage">
                                     <div class="text-center mb-3">
                                         <div class="fw-bolder">Form submission successful!</div>
@@ -96,13 +103,12 @@
                                         <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                     </div>
                                 </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
+                                <!-- Submit error message -->
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                                <!-- Submit Button-->
-                                <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit">Send</button>
+                                <!-- Submit Button -->
+                                <div class="text-center">
+                                    <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Enviar</button>
+                                </div>
                             </form>
                         </div>
                     </div>
